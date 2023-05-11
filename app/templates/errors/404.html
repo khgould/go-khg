@@ -1,0 +1,9 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <h1>File Not Found</h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/sad_robot.jpg') }}" alt="Sad Robot" class="small-image">
+    </div>
+    <p><a href="{{ url_for('main.homepage') }}">Back</a></p>
+{% endblock %}

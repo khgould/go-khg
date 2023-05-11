@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Download Resume{% endblock %}
+
+{% block content %}
+    <h1>Download Resume</h1>
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.email_address.label }}<br>
+            {{ form.email_address(size=50) }}<br>
+            {% for error in form.email_address.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+            {{ form.csrf_token }}
+            {{ form.recaptcha }}
+</p>
+        <div class="g-recaptcha" data-sitekey="{{ form.recaptcha.public_key }}"></div>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

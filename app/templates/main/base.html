@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Data Engineer for Mural by day. Reader, Economist, Athlete, and Engaged Citizen sporadically.">
+    {% if title %}
+        <title> KHG | {{ title }}</title></title>
+    {% else %}
+        <title>KHG</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+J6QLZsNVCGT2oYU8z+MvWXIz1T9cl" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/9c9c18cea2.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    {{ moment.include_moment() }}
+
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('main.homepage') }}">Home</a></li>
+        <li><a href="{{ url_for('contact.contact') }}">Contact Me</a></li>
+{#        {% if current_user.is_anonymous %}#}
+{#            <li><a href="{{ url_for('auth.login') }}">Login</a></li>#}
+{#        {% else %}#}
+{#            <li><a href="{{ url_for('main.resume') }}">Resume</a></li>#}
+{#            <li><h1>Hi, {{ current_user.username }}!</h1></li>#}
+{#            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>#}
+{#            <li><a href="{{ url_for('auth.change_password') }}">Change Password</a></li>#}
+{#        {% endif %}#}
+    </ul>
+    <ul>
+        <li><a href="https://twitter.com/thesamekeving" class="fa fa-twitter fa-xs"></a></li>
+        <li><a href="https://www.linkedin.com/in/kevin-gould1/" class="fa fa-linkedin fa-xs"></a></li>
+        <li><a href='https://github.com/khgould' class="fa fa-github fa-xs"></a></li>
+        <!-- make these smaller -->
+    </ul>
+</nav>
+<hr>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% block content %}{% endblock %}
+</body>
+</html>
+</body>
+<div class="footer">
+    <p>built with ❤️ using <a href="https://pypi.org/project/Flask/">flask</a> </p>
+    <p>©2023 khg | <a href="https://www.go-khg.xyz">par72</a> </p>
+    <img class="footer-logo" src="{{ url_for('static', filename='images/logos/logo_large_greyscale.png') }}" alt="KHG Logo"></div>
+</div>
+</html>

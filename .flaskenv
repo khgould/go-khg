@@ -1,0 +1,2 @@
+FLASK_APP=go-khg.py
+FLASK_DEBUG=False

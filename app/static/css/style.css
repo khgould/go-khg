@@ -1,0 +1,208 @@
+/* Set background color */
+body {
+    background-color: #F7F4E7;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the main content area */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* Style the homepage content */
+.home-content {
+    background-color: #F7F4E7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+/* Style the link list */
+.link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+}
+
+.link-list li a {
+    color: #333333;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.link-list li a:hover {
+    color: #FF8C00;
+}
+
+/* Style the image container */
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.image-container img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+/* Style the sub-title */
+.sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer p {
+    margin: 0;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.footer p a {
+    color: #FFFFFF;
+    text-underline: #333333;
+}
+
+
+.footer-logo {
+    width: auto;
+    transform: translateY(-165%);
+    z-index: 1;
+    height: 50px;
+    float: right;
+}
+
+/* main page*/
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-left: 40px;
+}
+
+.profile-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 60px;
+}
+
+.profile-header {
+    margin-left: 50px;
+}
+
+.profile-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.profile-header h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 0;
+    margin-top: -2px;
+    color: #C6D8AF;
+}
+
+.profile-header p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.profile-header a {
+    color: #C6D8AF;
+    text-underline: none;
+}
+
+.profile-header a:hover {
+    color: #333333;
+    text-underline: none;
+}

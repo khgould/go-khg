@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Enter a word and see it spin</h1>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="spin-text" placeholder="Enter word">
+        </div>
+    </form>
+    <div class="spin-container">
+        <p id="spinning-text"></p>
+    </div>
+</div>
+    <script src="{{ url_for('static', filename='scripts/spinning_word.js') }}"></script>
+{% endblock %}

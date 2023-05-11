@@ -1,0 +1,101 @@
+2023-05-10 07:03:07,340 INFO: Microblog startup [in /Users/khg/LOCAL_Documents/code/current/personal_webpage/app/__init__.py:76]
+2023-05-10 07:03:11,116 ERROR: Exception on /favicon.ico [GET] [in /Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/errors/handlers.py", line 8, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "main/base.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/templates/main/base.html", line 54, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/templates/errors/404.html", line 8, in block 'content'
+    <p><a href="{{ url_for('main.homepage') }}">Back</a></p>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.main'. Did you mean 'main.homepage' instead?
+2023-05-10 07:03:22,067 ERROR: Exception on /contact [GET] [in /Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/contact/routes.py", line 20, in contact
+    return render_template('email/contact_form.html', title='Sign In', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/templates/email/contact_form.html", line 2, in top-level template code
+    {% block content %}
+  File "/Users/khg/LOCAL_Documents/code/current/personal_webpage/app/templates/email/contact_form.html", line 13, in block 'content'
+    {{ form.email.label }} <br>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khg/.local/share/virtualenvs/personal_webpage-ol-bP6tQ/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'app.contact.forms.ContactMe object' has no attribute 'email'
+2023-05-10 07:04:33,820 INFO: Microblog startup [in /Users/khg/LOCAL_Documents/code/current/personal_webpage/app/__init__.py:76]
