@@ -38,4 +38,5 @@ app.db
 go-khg.log*
 personalwebpage-385919-b94f0d39228d.json
 google_oauth_client_secret.json
+github-actions-cicd_accessKeys.csv
 .env

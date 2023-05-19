@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <!-- Add this code where you want to display the Calendly widget -->
+    <div>
+        <h1>Book a meeting with me</h1>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/gould-kevin/20-with-kev"
+             style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+{% endblock %}

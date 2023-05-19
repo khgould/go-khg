@@ -2,26 +2,23 @@
 
 {% block content %}
     <div class="profile-section">
-        <img src="{{ url_for('static', filename='images/quad_notreallyme.png') }}" alt="stable-diffusion-kevin" title="stable-diffusion-kevin" class="profile-image">
+        <img src="{{ url_for('static', filename='images/main/quad_notreallyme.png') }}" alt="stable-diffusion-kevin"
+             title="stable-diffusion-kevin" class="profile-image">
         <div class="profile-header">
-            <h1>kevin h gould</h1>
-            <h2>data engineering and bizops</h2>
-            <p>working full-time with the team at <a href="https://www.mural.co">mural</a> — ➀&nbsp;building analytics infrastructure, ➁&nbsp;evangelizing data systems and ➂&nbsp;improving
-                data pipelines.</p>
+            <h1>Kevin Gould</h1>
+            {#            <h2>data engineering and bizops</h2>#}
+            <p>I studied economics and sustainable agriculture before joining an early stage supply chain data company -
+                where I wore many hats.</p>
+            <p>Currently, I'm working with <a href="https://www.mural.co">mural</a> — ➀&nbsp;building
+                data infrastructure, ➁&nbsp;evangelizing data engineering and ➂&nbsp;improving
+                data pipelines to power machine learning.</p>
+            <p>I've spent the last few years walking around & exploring different cities, San Diego, Chicago, Salt Lake
+                City, Denver, and San Fransisco.</p>
+            <ul>
+                <li><a href="{{ url_for('main.photos') }}">photos</a></li>
+                <li><a href="{{ url_for('main.notes') }}">notes</a></li>
+                {#                <li><a href="{{ url_for('main.recs') }}">recommendations</a></li>#}
+            </ul>
         </div>
     </div>
-    {#    <div class="slider-section">#}
-{#        <h2>things</h2>#}
-{#        <div class="slider-container">#}
-{#            <div class="slider-item">#}
-{#                <h3>airflow-docker-dbt</h3><a href="project-1.html"><img src="project-1.jpg" alt="airflow-docker-dbt"></a>#}
-{#            </div>#}
-{#            <div class="slider-item">#}
-{#                <h3>superset-nhl</h3><a href="project-2.html"><img src="project-2.jpg" alt="superset-nhl"></a>#}
-{#            </div>#}
-{#            <div class="slider-item">#}
-{#                <h3>mage-kafka</h3><a href="project-3.html"><img src="project-3.jpg" alt="mage-kafka"></a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
 {% endblock %}

@@ -1,7 +1,7 @@
 /* Set background color */
 body {
-    background-color: #F7F4E7;
-    font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Style the main content area */
@@ -54,7 +54,7 @@ nav ul li a:hover {
 
 /* Style the homepage content */
 .home-content {
-    background-color: #F7F4E7;
+    background-color: #fcfcfc;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -134,6 +134,7 @@ nav ul li a:hover {
     bottom: 0;
     left: 0;
     right: 0;
+    margin-top: 20px;
 }
 
 .footer p {
@@ -144,7 +145,7 @@ nav ul li a:hover {
 
 .footer p a {
     color: #FFFFFF;
-    text-underline: #333333;
+    /*text-underline: #333333;*/
 }
 
 
@@ -189,20 +190,105 @@ nav ul li a:hover {
     font-weight: lighter;
     margin: 0;
     margin-top: -2px;
-    color: #C6D8AF;
+    color: #a1c4ba;
 }
 
 .profile-header p {
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 16px;
 }
 
 .profile-header a {
-    color: #C6D8AF;
-    text-underline: none;
+    color: #a1c4ba;
+    /*text-underline: none;*/
 }
 
 .profile-header a:hover {
     color: #333333;
-    text-underline: none;
+    /*text-underline: none;*/
+}
+
+.profile-header ul {
+    margin-top: 30px;
+    margin-left: -40px;
+}
+
+.profile-header li {
+    color: #a1c4ba;
+    /*text-underline: none;*/
+    list-style: none;
+    font-size: 16px;
+}
+
+/* Style Error pages*/
+.error-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.error-content h1 {
+    font-size: 24px;
+    color: #ee7878;
+}
+
+.error-content .image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.error-content .small-image {
+    width: 200px;
+    height: 200px;
+}
+
+.error-content p {
+    font-size: 18px;
+    color: #333333;
+}
+
+.error-content .back-link {
+    text-decoration: none;
+    color: #6298ec;
+    font-weight: bold;
+}
+
+/* Photo Scrolling */
+#image-gallery {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+}
+
+#current-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image-thumbs {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    margin-top: 20px;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
 }

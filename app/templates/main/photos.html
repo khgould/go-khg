@@ -1,0 +1,31 @@
+{% extends "main/base.html" %}
+{% block content %}
+    <div class="intro">
+    <div id="image-gallery">
+        <img id="current-image" src="{{ url_for('static', filename='images/photos/IMG1.jpeg') }}" alt="Image 1">
+        <div id="image-thumbs"></div>
+    </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/gallery.js') }}"></script>
+{% endblock %}
+
+{#    <div class="photo-scrolls">#}
+{#        <div class="thumbnail-container">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG1.jpeg') }}" alt="Image 1" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG2.jpeg') }}" alt="Image 2" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG3.jpeg') }}" alt="Image 3" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG4.jpeg') }}" alt="Image 4" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG5.jpeg') }}" alt="Image 5" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG6.jpeg') }}" alt="Image 6" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG7.jpeg') }}" alt="Image 7" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG8.jpeg') }}" alt="Image 8" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG9.jpeg') }}" alt="Image 9" onclick="spotlightImage(this)">#}
+{#            <img src="{{ url_for('static', filename='images/photos/IMG10.jpeg') }}" alt="Image 10" onclick="spotlightImage(this)">#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="spotlight-container">#}
+{#        <div class="spotlight-image-wrapper">#}
+{#            <img id="spotlight-image" src="" alt="" onclick="closeSpotlight()">#}
+{#        </div>#}
+{#    </div>#}

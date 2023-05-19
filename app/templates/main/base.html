@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
           content="Data Engineer for Mural by day. Reader, Economist, Athlete, and Engaged Citizen sporadically.">
-    {% if title %}
-        <title> KHG | {{ title }}</title></title>
-    {% else %}
-        <title>KHG</title>
-    {% endif %}
+    <title> Kevin Gould</title>
+    <link rel="icon" type="image/svg" href="{{ url_for('static', filename='images/main/rocket.svg') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+J6QLZsNVCGT2oYU8z+MvWXIz1T9cl" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/9c9c18cea2.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    {% block otherscripts %}{% endblock %}
+    </script>
 
     {{ moment.include_moment() }}
 
@@ -24,15 +24,7 @@
 <nav>
     <ul>
         <li><a href="{{ url_for('main.homepage') }}">Home</a></li>
-        <li><a href="{{ url_for('contact.contact') }}">Contact Me</a></li>
-{#        {% if current_user.is_anonymous %}#}
-{#            <li><a href="{{ url_for('auth.login') }}">Login</a></li>#}
-{#        {% else %}#}
-{#            <li><a href="{{ url_for('main.resume') }}">Resume</a></li>#}
-{#            <li><h1>Hi, {{ current_user.username }}!</h1></li>#}
-{#            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>#}
-{#            <li><a href="{{ url_for('auth.change_password') }}">Change Password</a></li>#}
-{#        {% endif %}#}
+        <li><a href="{{ url_for('main.meet') }}">Meet me</a></li>
     </ul>
     <ul>
         <li><a href="https://twitter.com/thesamekeving" class="fa fa-twitter fa-xs"></a></li>
@@ -56,8 +48,7 @@
 </html>
 </body>
 <div class="footer">
-    <p>built with ❤️ using <a href="https://pypi.org/project/Flask/">flask</a> </p>
-    <p>©2023 khg | <a href="https://www.go-khg.xyz">par72</a> </p>
-    <img class="footer-logo" src="{{ url_for('static', filename='images/logos/logo_large_greyscale.png') }}" alt="KHG Logo"></div>
+    <p>built with <a href="https://pypi.org/project/Flask/">flask</a> </p>
+    <p>©2023 khg</p>
 </div>
 </html>
