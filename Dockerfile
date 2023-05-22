@@ -1,22 +1,21 @@
-FROM python:slim
+# Use the official lightweight Python image.
+# https://hub.docker.com/_/python
+FROM python:3.11-slim
 
-RUN useradd khg
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
 
-WORKDIR /home/go-khg
+# Copy local code to the container image.
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
 
-COPY requirements.txt requirements.txt
-RUN python -m venv venv
-RUN venv/bin/pip install -r requirements.txt
-RUN venv/bin/pip install gunicorn pymysql cryptography
+# Install production dependencies.
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app app
-COPY go-khg.py config.py boot.sh ./
-RUN chmod a+x boot.sh
-
-ENV FLASK_APP go-khg.py
-
-RUN chown -R khg:khg ./
-USER khg
-
-EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+# Run the web service on container startup. Here we use the gunicorn
+# webserver, with one worker process and 8 threads.
+# For environments with multiple CPU cores, increase the number of workers
+# to be equal to the cores available.
+# Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 go-khg:app
